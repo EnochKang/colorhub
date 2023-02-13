@@ -1,4 +1,4 @@
-<img src=".../vignettes/colorhub_logo.png" width="15%" />
+<img src="https://github.com/EnochKang/colorhub/blob/master/vignettes/colorhub_logo.png?raw=true" width="15%" />
 
 Package *colorhub* is a user-friendly collection of functions for
 convert colors between color systems. Users can install *colorhub* in R
