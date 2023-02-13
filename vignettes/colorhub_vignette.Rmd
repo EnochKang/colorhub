@@ -1,0 +1,27 @@
+---
+title: "colorhub_vignette"
+author: "Enoch Kang"
+output: rmarkdown::html_vignette
+vignette: >
+  %\VignetteIndexEntry{colorhub_vignette}
+  %\VignetteEngine{knitr::rmarkdown}
+  %\VignetteEncoding{UTF-8}
+---
+
+```{r echo = FALSE, out.width = "15%"}
+knitr::include_graphics("C:/Work/SMaRT/999. Other/colorhub/vignettes/colorhub_logo.png")
+```
+
+
+```{r, include = FALSE}
+knitr::opts_chunk$set(
+  collapse = TRUE,
+  comment = "#>"
+)
+```
+
+```{r setup}
+library(colorhub)
+```
+
+## A simple package for color conversion between systems

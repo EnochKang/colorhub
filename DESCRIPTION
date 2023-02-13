@@ -1,0 +1,23 @@
+Package: colorhub
+Type: Package
+Title: Convert color between color systems
+Version: 0.1.0
+Author: c(person("Enoch", "Kang", role = c("aut", "cre", "trl"), 
+                 comment = c(ORCID = "0000-0002-4903-942X"), 
+                  email = "y.enoch.kang@gmail.com"))
+Maintainer: Enoch Kang <y.enoch.kang@gmail.com>
+Description: A user-friendly collection of functions for convert colors between color systems.
+License: GPL (>= 3)
+Encoding: UTF-8
+Depends: R (>= 4.2.0)
+Imports: 
+    grDevices
+Suggests: 
+    knitr,
+    rmarkdown,
+    testthat (>= 3.0.0)
+VignetteBuilder: knitr
+LazyData: true
+RoxygenNote: 7.2.2
+Config/testthat/edition: 3
+Roxygen: list(markdown = TRUE)
