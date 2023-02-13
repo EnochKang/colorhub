@@ -1,6 +1,6 @@
 Package: colorhub
 Type: Package
-Title: Convert color between color systems
+Title: Convert Color Between Color Systems
 Version: 0.1.0
 Author: c(person("Enoch", "Kang", role = c("aut", "cre", "trl"), 
                  comment = c(ORCID = "0000-0002-4903-942X"), 
