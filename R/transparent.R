@@ -61,7 +61,7 @@ Transparent <- function(color, percent = 0) {
   if (lgcColor | lgcPrcnt)
     stop("Try to resolve abovementioned issues.")
 
-  optColor <- rgb(col2rgb(color)[1]/255, col2rgb(color)[2]/255, col2rgb(color)[3]/255, percent)
+  optColor <- rgb(col2rgb(color)[1]/255, col2rgb(color)[2]/255, col2rgb(color)[3]/255, )
 
   cat("Hex code:", optColor, "\n",
       "rgb info:\n",
@@ -71,6 +71,6 @@ Transparent <- function(color, percent = 0) {
       " Trans.: ", percent,
       sep = "")
 
-  output <- optColor
+  output <- rgb(col2rgb(color)[1]/255, col2rgb(color)[2]/255, col2rgb(color)[3]/255, percent)
 
 }
