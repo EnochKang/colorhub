@@ -63,6 +63,7 @@ MakeTrans <- function(color, percent = 0) {
   if (lgcColor | lgcPrcnt)
     stop("Try to resolve abovementioned issues.")
 
+  '
   cat(" \n")
   cat("Summary:\n")
 
@@ -74,15 +75,16 @@ MakeTrans <- function(color, percent = 0) {
       " Green:  ", col2rgb(color)[2], "\n",
       " Blue:   ", col2rgb(color)[3], "\n",
       " Trans.: ", percent,
-        sep = "")
+      sep = "")
 
   cat(" \n")
+  '
 
   output <- rgb(col2rgb(color)[1]/255, col2rgb(color)[2]/255, col2rgb(color)[3]/255, percent)
 
   output         <- as.list(output)
   class(output)  <- "colorhub"
-  output$proc    <- as.list("MakeTrans")
+  output$proc    <- "MakeTrans"
   output$summary <- capture.output(cat("Hex code: ", "\n", rgb(col2rgb(color)[1]/255, col2rgb(color)[2]/255, col2rgb(color)[3]/255, ), "\n",
                                        "rgb info: \n",
                                        " Red: ", "\n", col2rgb(color)[1], "\n",
@@ -93,7 +95,9 @@ MakeTrans <- function(color, percent = 0) {
 
   optTrans <<- output
 
-  return(output[[1]])
+  # cat(output[[1]])
+
+  tempTrans <- output[[1]]
 
 }
 
@@ -129,12 +133,12 @@ SmrzTrans <- function(data) {
   cat("Check object:\n")
 
   if (lgcInher | lgcProc) {
-    cat(paste(" Inherit -------------------------------------------------- X\n",
+    cat(paste(" Inherit ----------------------------------------------------- X\n",
               ' REQUIRE: Argument "data" must be an object of class \"colorhub\"
                produced by function **MakeTrans()**.'),
         fill = TRUE, sep = "")
   } else {
-    cat(paste(" Inherit -------------------------------------------------- V"),
+    cat(paste(" Inherit ----------------------------------------------------- V"),
         fill = TRUE, sep = "")
   }
 
@@ -143,16 +147,16 @@ SmrzTrans <- function(data) {
 
   cat(" \n")
   cat("Summary:\n")
-  try(cat(data$summary[1:2], "\n",
-          data$summary[3], "\n ",
-          data$summary[4], "   ", data$summary[5],"\n ",
-          data$summary[6], " ", data$summary[7],"\n ",
-          data$summary[8], "  ", data$summary[9],"\n ",
-          data$summary[10], data$summary[11],
-          sep = ""), TRUE)
+  cat(data$summary[1:2], "\n",
+      data$summary[3], "\n ",
+      data$summary[4], "   ", data$summary[5],"\n ",
+      data$summary[6], " ", data$summary[7],"\n ",
+      data$summary[8], "  ", data$summary[9],"\n ",
+      data$summary[10], data$summary[11],
+      sep = "")
 
-  data.frame(sys  = c(data$summary[1], data$summary[3], data$summary[4], data$summary[6], data$summary[8], data$summary[10]),
-             code = c(data$summary[2], "", data$summary[5], data$summary[7], data$summary[9], data$summary[11]))
+  optColor <<- data.frame(sys  = c(data$summary[1], data$summary[3], data$summary[4], data$summary[6], data$summary[8], data$summary[10]),
+                          code = c(data$summary[2], "", data$summary[5], data$summary[7], data$summary[9], data$summary[11]))
 
 }
 
