@@ -95,10 +95,10 @@ MakeTrans <- function(color, percent = 0) {
 
   optTrans <<- output
 
-  # cat(output[[1]])
-  tempTrans <- output[[1]]
-
   invisible(output)
+
+  # cat(output[[1]])
+  optInner <- output[[1]]
 }
 
 #' @title Summary of output of MakeTrans
