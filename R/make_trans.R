@@ -92,7 +92,8 @@ MakeTrans <- function(color, percent = 0) {
                                        sep = ""))
 
   optTrans <<- output
-  output[[1]]
+
+  return(output[[1]])
 
 }
 
