@@ -96,11 +96,10 @@ MakeTrans <- function(color, percent = 0) {
   optTrans <<- output
 
   # cat(output[[1]])
-
   tempTrans <- output[[1]]
 
+  invisible(output)
 }
-
 
 #' @title Summary of output of MakeTrans
 #'
@@ -145,6 +144,9 @@ SmrzTrans <- function(data) {
   if (lgcInher | lgcProc)
     stop("Try to resolve abovementioned issues.")
 
+  optColor <<- data.frame(sys  = c(data$summary[1], data$summary[3], data$summary[4], data$summary[6], data$summary[8], data$summary[10]),
+                          code = c(data$summary[2], "", data$summary[5], data$summary[7], data$summary[9], data$summary[11]))
+
   cat(" \n")
   cat("Summary:\n")
   cat(data$summary[1:2], "\n",
@@ -154,9 +156,6 @@ SmrzTrans <- function(data) {
       data$summary[8], "  ", data$summary[9],"\n ",
       data$summary[10], data$summary[11],
       sep = "")
-
-  optColor <<- data.frame(sys  = c(data$summary[1], data$summary[3], data$summary[4], data$summary[6], data$summary[8], data$summary[10]),
-                          code = c(data$summary[2], "", data$summary[5], data$summary[7], data$summary[9], data$summary[11]))
 
 }
 
