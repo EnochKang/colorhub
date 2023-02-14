@@ -92,6 +92,7 @@ MakeTrans <- function(color, percent = 0) {
                                        sep = ""))
 
   optTrans <<- output
+  output[[1]]
 
 }
 
@@ -112,11 +113,9 @@ MakeTrans <- function(color, percent = 0) {
 #'
 #' @examples
 #' library(colorhub)
-#' colorTrans <- MakeTrans("red", percent = 0.7)
+#' MakeTrans("red", percent = 0.7)
 #'
-#' colorTrans
-#'
-#' SmrzTrans(colorTrans)
+#' SmrzTrans(optTrans)
 #'
 #' @export SmrzTrans
 
@@ -151,8 +150,8 @@ SmrzTrans <- function(data) {
           data$summary[10], data$summary[11],
           sep = ""), TRUE)
 
-  optColor <<- data.frame(sys  = c(data$summary[1], data$summary[3], data$summary[4], data$summary[6], data$summary[8], data$summary[10]),
-                       code = c(data$summary[2], "", data$summary[5], data$summary[7], data$summary[9], data$summary[11]))
+  data.frame(sys  = c(data$summary[1], data$summary[3], data$summary[4], data$summary[6], data$summary[8], data$summary[10]),
+             code = c(data$summary[2], "", data$summary[5], data$summary[7], data$summary[9], data$summary[11]))
 
 }
 

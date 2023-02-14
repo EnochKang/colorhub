@@ -17,11 +17,9 @@ SmrzTrans(data)
 }
 \examples{
 library(colorhub)
-colorTrans <- MakeTrans("red", percent = 0.7)
+MakeTrans("red", percent = 0.7)
 
-colorTrans
-
-SmrzTrans(colorTrans)
+SmrzTrans(optTrans)
 
 }
 \seealso{
