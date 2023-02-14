@@ -1,7 +1,7 @@
 Package: colorhub
 Type: Package
 Title: Convert Color Between Color Systems
-Version: 0.1.0
+Version: 0.1.1
 Author: c(person("Enoch", "Kang", role = c("aut", "cre", "trl"), 
                  comment = c(ORCID = "0000-0002-4903-942X"), 
                   email = "y.enoch.kang@gmail.com"))
@@ -11,7 +11,8 @@ License: GPL (>= 3)
 Encoding: UTF-8
 Depends: R (>= 4.2.0)
 Imports: 
-    grDevices
+    grDevices,
+    utils
 Suggests: 
     knitr,
     rmarkdown,
