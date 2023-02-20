@@ -1,7 +1,7 @@
 <img src="https://github.com/EnochKang/colorhub/blob/master/vignettes/colorhub_logo.png?raw=true" width="15%" />
 
 Package *colorhub* is a user-friendly collection of functions for
-convert colors between color systems. Users can install *colorhub* in R
+conversion of colors amongst color systems. Users can install *colorhub* in R
 using following syntax:
 
     install.packages("devtools")
